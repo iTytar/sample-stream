@@ -1,0 +1,27 @@
+spring.main.web-application-type: none
+#spring.kafka.bootstrap-servers: 127.0.0.1:9092
+spring.cloud.stream:
+  function.definition: consume
+  bindings:
+    consume-in-0:
+      destination: employees
+      group: EmployeeConsumers
+    default:
+      ackEachRecord: true
+#  kafka:
+#    streams:
+#      binder:
+#        applicationId: sample-stream-producer
+#        configuration:
+#          commit.interval.ms: 100
+#          default:
+#            key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+#            value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+
+#Enable logging to debug for spring kafka config
+logging:
+  level:
+    org.springframework.kafka.config: debug
+  pattern.console:
+  file:
+    name: target/sample-stream-consumer.log

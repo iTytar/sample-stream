@@ -1,0 +1,29 @@
+spring.main.web-application-type: none
+#spring.kafka.bootstrap-servers: 127.0.0.1:9092
+spring.cloud.stream:
+  function.definition: process
+  bindings:
+    process-in-0:
+      destination: persons
+      group: personProcessors
+    process-out-0:
+      destination: employees
+    default:
+      ackEachRecord: true
+#  kafka:
+#    streams:
+#      binder:
+#        applicationId: sample-stream-producer
+#        configuration:
+#          commit.interval.ms: 100
+#          default:
+#            key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+#            value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+
+#Enable logging
+logging:
+  level:
+    org.springframework.kafka.config: debug
+  pattern.console:
+  file:
+    name: target/sample-stream-producer.log
