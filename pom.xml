@@ -38,6 +38,7 @@
         <module>sample-stream-producer</module> 
         <module>sample-stream-processor</module> 
         <module>sample-stream-consumer</module> 
+        <module>sample-stream-producer-reactive</module> 
     </modules>
 
     <dependencies>

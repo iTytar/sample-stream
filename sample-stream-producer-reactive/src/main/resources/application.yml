@@ -1,16 +1,10 @@
 spring.main.web-application-type: none
 #spring.kafka.bootstrap-servers: 127.0.0.1:9092
 spring.cloud.stream:
-# optional, but recomended to use
-  function.definition: process
+  function.definition: produce
   bindings:
-    process-in-0:
+    produce-out-0:
       destination: persons
-      group: personProcessors
-    process-out-0:
-      destination: employees
-    default:
-      ackEachRecord: true
 #  kafka:
 #    streams:
 #      binder:
