@@ -8,9 +8,9 @@
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <groupId>net.tyt.sample</groupId>
-    <artifactId>sample-stream-producer-reactive</artifactId>
-    <name>sample-stream-producer-reactive</name>
-    <description>Sample stream producer reactive</description>
+    <artifactId>sample-stream-producer-cli</artifactId>
+    <name>sample-stream-producer-cli</name>
+    <description>Sample stream producer CLI</description>
     <dependencies>
         <dependency>
             <groupId>net.tyt.sample</groupId>

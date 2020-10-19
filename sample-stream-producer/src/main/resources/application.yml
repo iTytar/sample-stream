@@ -1,7 +1,5 @@
-spring.main.web-application-type: none
 #spring.kafka.bootstrap-servers: 127.0.0.1:9092
 spring.cloud.stream:
-  function.definition: produce
   bindings:
     produce-out-0:
       destination: persons
@@ -18,7 +16,7 @@ spring.cloud.stream:
 #Enable logging
 logging:
   level:
-    org.springframework.kafka.config: debug
+    org.springframework: debug
   pattern.console:
   file:
     name: target/sample-stream-producer.log
